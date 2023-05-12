@@ -1,0 +1,37 @@
+.carousel{
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.carousel-inner {
+    height: 0;
+    padding-bottom: 60%; 
+}
+  
+  .carousel-item {
+    position: absolute !important; /* Bootstrap is insistent */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .carousel-item img {
+    height: 100%; /* Bootstrap handles width already */
+    object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+  }
+  li::marker{font-size:0;}
+  /* Footer */
+  footer {
+    position: absolute;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    background-color: #222831;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
