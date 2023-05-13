@@ -21,6 +21,29 @@
     height: 100%; /* Bootstrap handles width already */
     object-fit: cover; /* or 'contain' if you want stretch instead of crop */
   }
+
+   /* Bölüm başlıkları */
+   .info h2 {
+    margin-top: 5% !important;
+    margin: 5px;
+    padding: 15px;
+    background-color: #00ADB5;
+    color: #EEEEEE ;
+    text-align: center;
+  }
+  .info p {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-size: 22px;
+  }
+  .info img {
+    max-width: 60%;
+    max-height: 350px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
   li::marker{font-size:0;}
   /* Footer */
   footer {
