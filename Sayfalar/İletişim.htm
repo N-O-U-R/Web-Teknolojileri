@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/İletişim.css">
+    <script defer src="../js/index.js"></script>
+</head>
+<body>
+
+	
+    <!--Navigation bar-->
+    <header>
+        <nav>
+            <div id="nav-placeholder"></div>
+            <script>
+                $(function () {
+                    $("#nav-placeholder").load("Navbar.htm");
+                });
+            </script>
+        </nav>
+    </header>
+    <!--end of Navigation bar-->
+
+
+    <div class="container">
+        <form id="form" action="/">
+            <h1>İletişim</h1>
+            <div class="input-control">
+                <label for="ad">Ad</label>
+                <input id="ad" name="ad" type="text">
+                <div class="error"></div>
+            </div>
+			<div class="input-control">
+                <label for="soyad">Soyad</label>
+                <input id="soyad" name="soyad" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="telefonNo">Telefon Numarası</label>
+                <input id="telefonNo" name="telefonNo>
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="mesaj">Mesaj</label>
+                <input id="mesaj" name="mesaj">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+	
+    <!--footer-->
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    Web sitemi ziyaret ettiğiniz için teşekkür ederim!
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--end of footer-->
+
+</body>
+</html>
