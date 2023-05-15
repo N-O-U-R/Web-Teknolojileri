@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Sayfası</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <link rel="stylesheet" href="../Css/login.css">
+
+  <script>
+    $(document).ready(function() {
+      $('form').on('submit', function(event) {
+        event.preventDefault();
+
+        // Kullanıcı adı ve şifre değerlerini alın
+        var username = $('#username').val();
+        var password = $('#password').val();
+
+        // Kullanıcı adını email formatında ve dolu olduğunu kontrol et
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(username) || username.trim() === '' || password.trim() === '') {
+          alert('Kullanıcı adı veya şifre geçersiz!');
+          return;
+        }
+
+        // Form verilerini PHP sayfasına post et
+        $.post('../php/login.php', { username: username, password: password }, function(data) {
+          // Gelen cevaba göre işlem yap
+          if (data === 'success') {
+            alert('Hoşgeldiniz ' + username + '!');
+          } else {
+            alert('Login işlemi başarısız!');
+            window.location.href = 'login.htm';
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("Navbar.htm");
+        });
+    </script>
+    <!--end of Navigation bar-->
+    
+<div class="container login">
+  <h2>Login Sayfası</h2>
+  <form>
+    <div>
+      <label for="username">Kullanıcı Adı (E-posta)</label>
+      <input type="text" id="username" name="username">
+    </div>
+    <div>
+      <label for="password">Şifre</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <button type="submit">Giriş Yap</button>
+  </form>
+
+</div>
+ 
+  
+    <!--footer-->
+    <footer>
+      <div class="container-fluid padding">
+          <div class="row text-center">
+              <div class="col-md-12">
+                  Web sitemi ziyaret ettiğiniz için teşekkür ederim!
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!--end of footer-->
+
+</body>
+</html>
