@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>İletişim</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+  <link rel="stylesheet" href="../Css/getİletişim.css">
+</head>
+<body>
+
+ <!--Navigation bar-->
+ <div id="nav-placeholder"></div>
+ <script>
+     $(function () {
+         $("#nav-placeholder").load("Navbar.htm");
+     });
+ </script>
+ <!--end of Navigation bar-->
+
+  <div class="container iletisim-form">
+    <h1>Girilen Veriler</h1>
+    <table>
+      <tr>
+        <th>Ad</th>
+       <td><div id="display-ad"></div></td>
+      </tr>
+      <tr>
+        <th>Soyad</th>
+        <td><div id="display-soyad"></div></td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td><div id="display-email"></div></td>
+      </tr>
+      <tr>
+        <th>Telefon Numarası</th>
+        <td><div id="display-tel"></div></td>
+      </tr>
+      <tr>
+        <th>Mesaj</th>
+        <td><div id="display-mesaj"></div></td>
+      </tr>
+    </table>
+  </div>
+
+    <!--footer-->
+    <footer>
+      <div class="container-fluid padding">
+          <div class="row text-center">
+              <div class="col-md-12">
+                  Web sitemi ziyaret ettiğiniz için teşekkür ederim!
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!--end of footer-->
+
+  <script src="../js/index.js"></script>
+  <script>
+    // Retrieve form values from local storage and display them in the table
+    document.getElementById('display-ad').innerText = localStorage.getItem('ad');
+    document.getElementById('display-soyad').innerText = localStorage.getItem('soyad');
+    document.getElementById('display-email').innerText = localStorage.getItem('email');
+    document.getElementById('display-tel').innerText = localStorage.getItem('tel');
+    document.getElementById('display-mesaj').innerText = localStorage.getItem('mesaj');
+  </script>
+</body>
+</html>

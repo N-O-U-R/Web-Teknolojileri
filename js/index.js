@@ -15,7 +15,15 @@ form.addEventListener('submit', e => {
     const mesajValue = mesaj.value;
     const telValue = tel.value;
 
+    localStorage.setItem('ad', adValue);
+    localStorage.setItem('soyad', soyadValue);
+    localStorage.setItem('email', emailValue);
+    localStorage.setItem('mesaj', mesajValue);
+    localStorage.setItem('tel', telValue);
+
     validateInputs(adValue, soyadValue, emailValue, mesajValue, telValue);
+
+    form.submit();
 });
 
 const setError = (element, message) => {
