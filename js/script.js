@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var apiKey = "90d7e97a"; 
-    var movies = ["The Godfather", "Dune", "The Dark Knight", "Breaking Bad", "Game of Thrones", "better call saul", "Mr Robot", "Dark", "interstellar", "Joker", "Berserk", "Lord of the rings", "inception", "Memento", "Se7en", "The Prestige","The Revenant", "Blade Runner 2049", "Fight Club", "1917", "Zodiac", "Vinland Saga", "The Matrix", "Shutter island", "Mad max fury road", "Dunkirk", "Django unchained", "The Batman"]; 
+    var movies = ["The Godfather", "Dune", "The Dark Knight", "Breaking Bad", "Game of Thrones", "better call saul", "Mr Robot", "Dark", "interstellar", "Joker", "Berserk", "Lord of the rings", "inception", "Memento", "Se7en", "The Prestige","The Revenant", "Blade Runner 2049", "Fight Club", "1917", "Zodiac", "Vinland Saga", "The Matrix", "Shutter island", "Mad max fury road", "Dunkirk", "Django unchained", "The Batman", "The Pianist", "Whiplash", "Gladiator", "The Departed", "Parasite"]; 
     for (var i = 0; i < movies.length; i++) {
       $.ajax({
         url: "http://www.omdbapi.com/",
