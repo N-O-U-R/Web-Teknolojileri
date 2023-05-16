@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo 'error';
   }
 } else {
-  header("Location: login.htm"); // POST metoduyla erişilmediyse login sayfasına yönlendir
+  header("Location: login.html"); // POST metoduyla erişilmediyse login sayfasına yönlendir
   exit;
 }
 ?>
