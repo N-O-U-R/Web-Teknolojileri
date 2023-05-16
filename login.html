@@ -5,7 +5,7 @@
   <title>Login Sayfası</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <link rel="stylesheet" href="../Css/login.css">
+  <link rel="stylesheet" href="Css/login.css">
 
   <script>
     $(document).ready(function() {
@@ -24,7 +24,7 @@
         }
 
         // Form verilerini PHP sayfasına post et
-        $.post('../php/login.php', { username: username, password: password }, function(data) {
+        $.post('php/login.php', { username: username, password: password }, function(data) {
           // Gelen cevaba göre işlem yap
           if (data === 'success') {
             alert('Hoşgeldiniz ' + username + '!');
