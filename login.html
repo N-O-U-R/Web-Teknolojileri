@@ -18,8 +18,18 @@
 
         // Kullanıcı adını email formatında ve dolu olduğunu kontrol et
         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(username) || username.trim() === '' || password.trim() === '') {
-          alert('Kullanıcı adı veya şifre geçersiz!');
+        if (!emailRegex.test(username)) {
+          alert('Kullanıcı adı email formatında olmalıdır!')
+          return;
+        }
+        else if(username.trim() === '')
+        {
+          alert('Kullanıcı adı boş olamaz!');
+          return;
+        }
+        else if(password.trim() === '')
+        {
+          alert('Şifre boş olamaz!');
           return;
         }
 
